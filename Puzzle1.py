@@ -2,13 +2,13 @@ import itertools
 
 # Part 1: Attempt 1
 currentCalibration = 0
-input = open("input1.txt", "r")
+input = open("puzzle1.txt", "r")
 for line in input:
     currentCalibration += int(line)
 print(currentCalibration)
 
 # Part 1: Attempt 2
-lines = [int(x) for x in open("input1.txt").readlines()]
+lines = [int(x) for x in open("puzzle1.txt").readlines()]
 print(sum(lines))
 
 # Part 2: Attempt 1
@@ -19,7 +19,7 @@ while switch == True:
     if switch == False:
         break
     # Reset file pointer
-    myInput = open("input1.txt", "r")
+    myInput = open("puzzle1.txt", "r")
     for line in myInput:
         # Runs if array is empty
         if not previousCalibrations:
@@ -37,7 +37,7 @@ while switch == True:
                 previousCalibrations.append(currentCalibration)
 
 # Part 2: Attempt 2
-lines = [int(x) for x in open("input1.txt").readlines()]
+lines = [int(x) for x in open("puzzle1.txt").readlines()]
 currentCalibration = 0
 previousCalibrations = set([0])
 for line in itertools.cycle(lines):
